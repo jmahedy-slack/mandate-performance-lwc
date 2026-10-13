@@ -1,0 +1,13 @@
+{
+  "name": "mandate-performance-lwc",
+  "version": "1.0.0",
+  "description": "Ninety One Mandate Performance Record Page (Salesforce LWC)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}

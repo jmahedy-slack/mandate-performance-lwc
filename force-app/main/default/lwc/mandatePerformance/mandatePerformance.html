@@ -1,0 +1,89 @@
+<template>
+  <div class="page">
+    <header class="brand-header">
+      <div class="brand-mark">Ninety One</div>
+      <div class="brand-subtitle">Mandate performance</div>
+    </header>
+
+    <section class="highlights slds-box">
+      <div class="highlights-main">
+        <h1 class="mandate-title">{mandateName}</h1>
+        <p class="client-name">{clientName}</p>
+        <dl class="meta-grid">
+          <div>
+            <dt>AUM</dt>
+            <dd>{aumFormatted}</dd>
+          </div>
+          <div>
+            <dt>Inception</dt>
+            <dd>{inception}</dd>
+          </div>
+        </dl>
+      </div>
+      <span class={statusClass}>{statusLabel}</span>
+    </section>
+
+    <div class="layout">
+      <main class="main-column">
+        <section class="slds-box card">
+          <h2 class="section-title">Performance vs {benchmarkName}</h2>
+          <table class="perf-table">
+            <thead>
+              <tr>
+                <th scope="col">Period</th>
+                <th scope="col">Portfolio %</th>
+                <th scope="col">Benchmark %</th>
+                <th scope="col">Active %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <template for:each={performanceRows} for:item="row">
+                <tr key={row.key}>
+                  <td>{row.label}</td>
+                  <td>{row.portfolio}%</td>
+                  <td>{row.benchmark}%</td>
+                  <td class="active-cell">{row.activeFormatted}</td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="slds-box card chart-card">
+          <h2 class="section-title">Active return by period</h2>
+          <svg class="active-chart" viewBox="0 0 320 160" role="img" aria-label="Active return bar chart">
+            <line x1="24" y1="80" x2="296" y2="80" class="zero-line"></line>
+            <template for:each={chartBars} for:item="bar">
+              <g key={bar.key} class="bar-group">
+                <rect
+                  class={bar.className}
+                  x={bar.x}
+                  y={bar.y}
+                  width="36"
+                  height={bar.height}
+                  rx="2"
+                ></rect>
+                <text class="bar-label" x={bar.textX} y="150">{bar.label}</text>
+              </g>
+            </template>
+          </svg>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <article class="slds-box side-card">
+          <h3>Next review</h3>
+          <p class="side-value">{nextReview}</p>
+        </article>
+        <article class="slds-box side-card">
+          <h3>Relationship manager</h3>
+          <p class="side-value">{relationshipManager}</p>
+        </article>
+        <article class="slds-box side-card action-card">
+          <h3>Next best action</h3>
+          <p class="action-text">{nextBestAction}</p>
+        </article>
+      </aside>
+    </div>
+  </div>
+</template>
