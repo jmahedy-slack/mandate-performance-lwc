@@ -1,0 +1,5 @@
+node_modules/
+.sfdx/
+.sf/
+.localdevserver/
+**/.DS_Store
