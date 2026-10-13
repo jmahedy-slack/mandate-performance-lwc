@@ -1,0 +1,8 @@
+{
+  "name": "mandate-performance-lwc",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/mandateCalc.test.js"
+  }
+}
