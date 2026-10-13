@@ -1,0 +1,59 @@
+.page {
+  background: #f3f3f3;
+  min-height: 100%;
+}
+
+.brand-header {
+  background: #ffffff;
+  border-left: 4px solid #60a5fa;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.brand-kicker {
+  color: #60a5fa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.status-chip {
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+}
+
+.status-outperforming {
+  background: #2e844a;
+  color: #ffffff;
+}
+
+.status-underperforming {
+  background: #c23934;
+  color: #ffffff;
+}
+
+.highlights dt {
+  font-size: 0.75rem;
+}
+
+.active-positive {
+  color: #2e844a;
+  font-weight: 600;
+}
+
+.active-negative {
+  color: #c23934;
+  font-weight: 600;
+}
+
+.chart-label {
+  fill: #444444;
+  font-size: 11px;
+}
+
+.positive,
+.negative {
+  /* test identifiers via barColor in data */
+}
